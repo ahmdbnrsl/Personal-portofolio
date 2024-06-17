@@ -1,6 +1,7 @@
+'use client';
+
 export default function Form() {
-    const HandleSubmit = async (e: any) => {
-        'use server';
+    const HandleSubmit = (e: any) => {
         e.preventDefault();
         const option = {
             method: 'POST',
@@ -15,7 +16,7 @@ export default function Form() {
             })
         };
 
-        await fetch(process.env.NEXT_PUBLIC_BASE_URL + 'send', option)
+        fetch(process.env.NEXT_PUBLIC_BASE_URL + 'send', option)
             .then(response => response.json())
             .then(data => alert('success'))
             .catch(error => alert(error));
