@@ -22,6 +22,6 @@ export async function Fetch({
 
     await fetch(process.env.NEXT_PUBLIC_BASE_URL + 'send', option)
         .then(response => response.json())
-        .then(data => alert('success'))
-        .catch(error => alert(error));
+        .then(data => console.log('success'))
+        .catch(error => console.error(error));
 }
