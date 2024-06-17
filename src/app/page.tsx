@@ -1,25 +1,14 @@
 'use client';
+import { Fetch } from '@/services/fetcher';
 
 export default function Form() {
-    const HandleSubmit = (e: any) => {
+    const HandleSubmit = async (e: any) => {
         e.preventDefault();
-        const option = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                secret: process.env.NEXT_PUBLIC_SECRET,
-                number: e.target.no.value,
-                mess: e.target.mess.value,
-                rep: 'Terimakasih telah mengirimkan pesan,\nadmin saya akan merespon anda secepatnya'
-            })
-        };
-
-        fetch(process.env.NEXT_PUBLIC_BASE_URL + 'send', option)
-            .then(response => response.json())
-            .then(data => alert('success'))
-            .catch(error => alert(error));
+        await Fetch({
+            number: e.target.no.value,
+            mess: e.target.mess.value
+        });
+        e.reset();
     };
     return (
         <div className='w-full min-h-screen bg-black flex justify-center items-center p-5'>
