@@ -1,4 +1,3 @@
-'use client';
 export default function Form() {
     const HandleSubmit = async (e: any) => {
         'use server';
