@@ -1,5 +1,5 @@
 export default async function Form() {
-    const HandleSubmit = (e: any) => {
+    const HandleSubmit = async (e: any) => {
         e.preventDefault();
         const option = {
             method: 'POST',
