@@ -8,7 +8,7 @@ export default function Form() {
             number: e.target.no.value,
             mess: e.target.mess.value
         });
-        e.reset();
+        e.target.reset();
     };
     return (
         <div className='w-full min-h-screen bg-black flex justify-center items-center p-5'>
