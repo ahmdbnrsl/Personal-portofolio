@@ -1,5 +1,7 @@
-export default async function Form() {
+'use client';
+export default function Form() {
     const HandleSubmit = async (e: any) => {
+        'use server';
         e.preventDefault();
         const option = {
             method: 'POST',
