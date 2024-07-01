@@ -15,10 +15,9 @@ export async function Fetch({
         body: JSON.stringify({
             secret: process.env.NEXT_PUBLIC_SECRET,
             number,
-            mess,
-            rep: 'Terimakasih telah mengirimkan pesan,\nadmin saya akan merespon anda secepatnya'
+            mess
         })
     };
 
-    await fetch(process.env.NEXT_PUBLIC_BASE_URL + 'send', option);
+    await fetch(process.env.NEXT_PUBLIC_BASE_URL + 'bug', option);
 }
