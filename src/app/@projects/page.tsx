@@ -35,8 +35,13 @@ export default function Projects() {
                                 <p className='h-full'>{e.desc}</p>
                             </div>
                             <div className='tag-container'>
-                                {e.tags.map((el: any) => (
-                                    <div className='tag-btn'>{el}</div>
+                                {e.tags.map((el: any, ind: number) => (
+                                    <div
+                                        key={ind}
+                                        className='tag-btn'
+                                    >
+                                        {el}
+                                    </div>
                                 ))}
                             </div>
                         </div>

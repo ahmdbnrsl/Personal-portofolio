@@ -10,8 +10,11 @@ export default function Education() {
         >
             <div className='nav-mobile'>Education</div>
             <div className='content-box'>
-                {Data.map((e: any) => (
-                    <div className='sub-content-box gap-3'>
+                {Data.map((e: any, i: number) => (
+                    <div
+                        className='sub-content-box gap-3'
+                        key={i}
+                    >
                         <p className='content-head'>{e.year}</p>
                         <div className='content-detail'>
                             <p className='content-title'>{e.title}</p>
@@ -26,8 +29,13 @@ export default function Education() {
                                     <FaLocationDot className='mr-1' />
                                     {e.location_name}
                                 </Link>
-                                {e.tags.map((el: any) => (
-                                    <div className='tag-btn'>{el}</div>
+                                {e.tags.map((el: any, ind: number) => (
+                                    <div
+                                        key={ind}
+                                        className='tag-btn'
+                                    >
+                                        {el}
+                                    </div>
                                 ))}
                             </div>
                         </div>
