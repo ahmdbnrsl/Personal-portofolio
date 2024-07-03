@@ -49,7 +49,7 @@ export default function Header() {
         };
     }, []);
     return (
-        <header className='header'>
+        <>
             <div className='desc'>
                 <h1 className='title cursor-pointer'>
                     <Link href='/'>Ahmad Beni Rusli</Link>
@@ -121,6 +121,6 @@ export default function Header() {
                     <FaTiktok className='icon hover:text-slate-200' />
                 </Link>
             </div>
-        </header>
+        </>
     );
 }
