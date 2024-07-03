@@ -22,11 +22,11 @@
         @apply bg-fixed lg:bg-center w-full min-h-screen bg-slate-900 lg:bg-local relative;
     }
     .sub-root-container {
-        @apply mx-auto w-full max-w-6xl lg:flex min-h-screen;
+        @apply mx-auto w-full max-w-6xl lg:flex min-h-screen gap-8;
     }
     /*=== HEADER ===*/
     .header {
-        @apply flex flex-col lg:justify-between lg:items-start gap-3 md:gap-5 px-7 sm:px-10 py-16 md:py-20 w-full lg:w-1/2 lg:h-screen md:px-12 lg:pl-0 lg:pr-12 lg:sticky lg:top-0 lg:py-24;
+        @apply flex flex-col lg:justify-between lg:items-start gap-3 md:gap-5 px-7 sm:px-10 py-16 md:py-20 w-full lg:w-1/2 lg:h-screen md:px-12 lg:pl-12 lg:sticky lg:top-0 lg:py-24;
     }
     .desc {
         @apply flex flex-col gap-3 md:gap-5;
