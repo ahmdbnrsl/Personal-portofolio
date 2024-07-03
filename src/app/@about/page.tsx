@@ -1,4 +1,4 @@
-export default () => {
+export default function About() {
     return (
         <div
             className='sections mt-0 scroll-mt-24'
@@ -58,4 +58,4 @@ export default () => {
             </div>
         </div>
     );
-};
+}

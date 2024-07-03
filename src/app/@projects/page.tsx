@@ -3,7 +3,7 @@ import { FaGithub } from 'react-icons/fa6';
 import Image from 'next/image';
 import Link from 'next/link';
 import Data from '@/data/projects.json';
-export default () => {
+export default function Projects() {
     return (
         <div
             className='sections scroll-mt-18'
@@ -68,4 +68,4 @@ export default () => {
             </div>
         </div>
     );
-};
+}

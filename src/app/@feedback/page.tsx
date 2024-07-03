@@ -4,7 +4,7 @@ import { CiPaperplane } from 'react-icons/ci';
 import { Fetch } from '@/services/fetcher.ts';
 import { useState } from 'react';
 
-export default () => {
+export default function Feedback() {
     const [loading, setLoading] = useState<boolean>(false);
     const [opacity, setOpacity] = useState<string>('opacity-100');
     const [isDisable, setIsDisable] = useState<boolean>(false);
@@ -100,4 +100,4 @@ export default () => {
             </div>
         </div>
     );
-};
+}

@@ -2,7 +2,7 @@ import { FaLocationDot } from 'react-icons/fa6';
 import Data from '@/data/education.json';
 import Link from 'next/link';
 
-export default () => {
+export default function Education() {
     return (
         <div
             className='sections'
@@ -36,4 +36,4 @@ export default () => {
             </div>
         </div>
     );
-};
+}

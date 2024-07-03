@@ -9,7 +9,7 @@ import {
 import Link from 'next/link';
 import { useEffect } from 'react';
 
-export default () => {
+export default function Header() {
     const HandleClick = (e: any) => {
         const element: any = document.getElementById(e.target.textContent);
         element.scrollIntoView({
@@ -123,4 +123,4 @@ export default () => {
             </div>
         </header>
     );
-};
+}

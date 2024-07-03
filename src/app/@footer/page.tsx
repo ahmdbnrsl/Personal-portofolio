@@ -1,5 +1,5 @@
 import Link from 'next/link';
-export default () => {
+export default function Footer() {
     return (
         <div
             className='sections'
@@ -25,4 +25,4 @@ export default () => {
             </div>
         </div>
     );
-};
+}
