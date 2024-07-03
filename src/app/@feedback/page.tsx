@@ -1,7 +1,7 @@
 'use client';
 import { FaWhatsapp } from 'react-icons/fa6';
 import { CiPaperplane } from 'react-icons/ci';
-import { Fetch } from '@/services/fetcher.ts';
+import { Fetch } from '@/services/fetcher';
 import { useState } from 'react';
 
 export default function Feedback() {
