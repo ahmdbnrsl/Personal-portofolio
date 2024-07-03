@@ -16,7 +16,7 @@ export default function About() {
                         <span className='font-medium text-slate-200'>
                             Cilacap
                         </span>
-                        . Since I was young, I live always had a passion for
+                        . Since I was young, I have always had a passion for
                         both{' '}
                         <span className='font-medium text-slate-200'>
                             coding
