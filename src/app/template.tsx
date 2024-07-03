@@ -12,9 +12,7 @@ export const metadata: Metadata = {
             url: 'https://instagram.com/ahmd.bn.tsx'
         }
     ],
-    icons: {
-        icon: '/icon.png'
-    },
+
     openGraph: {
         title: 'Ahmad Beni Rusli',
         description: 'Personal portofolio build with Next.js'

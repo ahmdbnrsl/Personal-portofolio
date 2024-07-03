@@ -8,6 +8,7 @@ export default function Feedback() {
     const [loading, setLoading] = useState<boolean>(false);
     const [opacity, setOpacity] = useState<string>('opacity-100');
     const [isDisable, setIsDisable] = useState<boolean>(false);
+    const [errs, setErrs] = useState<boolean>(false);
     const HandleSubmit = async (e: any) => {
         e.preventDefault();
         if (
@@ -39,6 +40,8 @@ export default function Feedback() {
                 setLoading(false);
                 setOpacity('opacity-100');
                 setIsDisable(false);
+                setErrs(true);
+                setTimeout(() => setErrs(false), 2000);
             }
         }
     };
@@ -48,6 +51,11 @@ export default function Feedback() {
             id='Feedback'
         >
             <div className='nav-mobile'>Send message</div>
+            <div className={`sending-error-box ${errs ? 'flex' : 'hidden'}`}>
+                <p className='text-lg text-red-500 font-medium tracking-normal'>
+                    Something went wrong!
+                </p>
+            </div>
             <div
                 className={`${loading ? 'flex' : 'hidden'} sending-loading-box`}
             >

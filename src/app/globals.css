@@ -125,6 +125,9 @@
     .sending-loading-box {
         @apply absolute -inset-x-0 -inset-y-0 flex-col justify-center items-center gap-1.5 z-10;
     }
+    .sending-error-box {
+        @apply absolute -inset-x-0 -inset-y-0 flex-col justify-center items-center gap-1.5 z-[11];
+    }
     .sending-loading-content {
         @apply h-3 rounded-full bg-sky-400;
     }
