@@ -6,7 +6,7 @@ export async function Fetch({
 }: {
     number: string;
     mess: string;
-}): any {
+}): Promise<boolean> {
     const option = {
         method: 'POST',
         headers: {
