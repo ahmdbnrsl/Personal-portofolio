@@ -1,9 +1,9 @@
 'use client';
-import { InterTight } from 'next/font/google';
+import { Intertight } from 'next/font/google';
 import { useState } from 'react';
 import './globals.css';
 
-const inter = InterTight({
+const inter = Intertight({
     subsets: ['latin'],
     weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
 });
