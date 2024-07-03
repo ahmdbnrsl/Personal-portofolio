@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Personal Portofolio",
+        "desc": "This is my second portfolio, built using Next.js, Tailwind CSS and hosted on Vercel",
+        "tags": ["Next.js", "Typescript", "React", "Tailwind"],
+        "thumbnail": "/projects/01.jpg",
+        "demo": "/"
+    },
+    {
+        "name": "Online Qur'an",
+        "desc": "The Online Quran App based on website. Integrated with API from santrikoding. With this app you can read Quran from anywhere, and you can marked latest ayah which you readed. Not only that, this application is also equipped with an ayah and surah search which will speed you up in finding the verse you want to read.",
+        "tags": ["Vite", "Typescript", "React", "Tailwind", "Mongo DB"],
+        "thumbnail": "/projects/02.png",
+        "demo": "https://alquran-kareem.my.id/"
+    },
+    {
+        "name": "Tiktok Media Downloader",
+        "desc": "Tools which can help you to download some media from tiktok with fast speed and high quality.",
+        "tags": ["Vite", "React", "Tailwind"],
+        "thumbnail": "/projects/03.png",
+        "demo": "https://down-tik.vercel.app/"
+    },
+    {
+        "name": "Note App",
+        "desc": "Create some note and manage it using Note App.",
+        "tags": ["Vite", "React", "Tailwind", "Mongo DB", "Bun", "Typescript"],
+        "thumbnail": "/projects/04.png",
+        "demo": "https://notesqu.vercel.app/"
+    }
+]

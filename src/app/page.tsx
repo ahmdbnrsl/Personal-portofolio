@@ -1,60 +1,126 @@
 'use client';
-import { Fetch } from '@/services/fetcher';
+import {
+    FaGithub,
+    FaInstagram,
+    FaXTwitter,
+    FaLinkedin,
+    FaTiktok
+} from 'react-icons/fa6';
+import Link from 'next/link';
+import { useEffect } from 'react';
 
-export default function Form() {
-    const HandleSubmit = async (e: any) => {
-        e.preventDefault();
-        await Fetch({
-            number: e.target.no.value,
-            mess: e.target.mess.value
+export default () => {
+    const HandleClick = (e: any) => {
+        const element: any = document.getElementById(e.target.textContent);
+        element.scrollIntoView({
+            block: 'start',
+            behavior: 'smooth'
         });
-        e.target.reset();
     };
+    useEffect(() => {
+        let section = document.querySelectorAll('.sections');
+        let menu = document.querySelectorAll('.nav-btn');
+
+        window.onscroll = () => {
+            section.forEach((i: any) => {
+                let top = window.scrollY;
+                let offset = i.offsetTop - 90;
+                let height = i.offsetHeight;
+                let id = i.getAttribute('id');
+
+                if (top >= offset && top < offset + height) {
+                    menu.forEach((link: any) => {
+                        link.classList.remove('text-slate-200');
+                        link.children[0].classList.remove('px-10');
+                        link.children[0].classList.remove('bg-slate-200');
+
+                        document
+                            ?.querySelector(`.${id}`)
+                            ?.classList?.add('text-slate-200');
+                        document
+                            ?.querySelector(`.${id}`)
+                            ?.children[0]?.classList?.add('px-10');
+                        document
+                            ?.querySelector(`.${id}`)
+                            ?.children[0]?.classList?.add('bg-slate-200');
+                    });
+                }
+            });
+        };
+    }, []);
     return (
-        <div className='w-full min-h-screen bg-black flex justify-center items-center p-5'>
-            <div className='flex flex-col w-full max-w-md gap-5 items-center'>
-                <h1 className='bg-gradient-to-b from-white to-zinc-300 text-transparent inline-block bg-clip-text text-5xl font-bold'>
-                    Wa API
+        <header className='header'>
+            <div className='desc'>
+                <h1 className='title cursor-pointer'>
+                    <Link href='/'>Ahmad Beni Rusli</Link>
                 </h1>
-                <form
-                    onSubmit={e => HandleSubmit(e)}
-                    className='bg-zinc-950 w-full rounded-xl border border-zinc-800 p-5 flex flex-col gap-3'
-                >
-                    <div className='flex flex-col'>
-                        <label
-                            htmlFor='no'
-                            className='text-zinc-400'
-                        >
-                            masukan nomor wa
-                        </label>
-                        <input
-                            name='no'
-                            type='number'
-                            id='no'
-                            className='mt-2 text-zinc-200 px-5 py-3 outline-0 bg-zinc-900 rounded-xl border-4 border-zinc-700 focus:border-zinc-500 active:border-zinc-500'
-                        />
-                    </div>
-                    <div className='flex flex-col'>
-                        <label
-                            htmlFor='mess'
-                            className='text-zinc-400'
-                        >
-                            masukan pesan
-                        </label>
-                        <textarea
-                            name='mess'
-                            id='mess'
-                            className='mt-2 text-zinc-200 px-5 py-3 outline-0 bg-zinc-900 rounded-xl border-4 border-zinc-700 focus:border-zinc-500 active:border-zinc-500'
-                        ></textarea>
-                    </div>
+                <p className='sub-title'>Fullstack Web Developer</p>
+                <p className='quote'>
+                    Professional code resolver, Creative, and Critical thinker
+                </p>
+                <nav className='nav'>
                     <button
-                        type='submit'
-                        className='mt-3 px-5 py-2 rounded-xl bg-gradient-to-b from-white to-zinc-200 text-black font-medium text-xl'
+                        className='About nav-btn group'
+                        onClick={HandleClick}
                     >
-                        Submit
+                        <div className='nav-line group-hover:px-10 group-hover:bg-slate-200 group-active:px-10 group-active:bg-slate-200'></div>
+                        About
                     </button>
-                </form>
+                    <button
+                        className='Education nav-btn group'
+                        onClick={HandleClick}
+                    >
+                        <div className='nav-line group-hover:px-10 group-hover:bg-slate-200 group-active:px-10 group-active:bg-slate-200'></div>
+                        Education
+                    </button>
+                    <button
+                        className='Project nav-btn group'
+                        onClick={HandleClick}
+                    >
+                        <div className='nav-line group-hover:px-10 group-hover:bg-slate-200 group-active:px-10 group-active:bg-slate-200'></div>
+                        Project
+                    </button>
+                    <button
+                        className='Feedback nav-btn group'
+                        onClick={HandleClick}
+                    >
+                        <div className='nav-line group-hover:px-10 group-hover:bg-slate-200 group-active:px-10 group-active:bg-slate-200'></div>
+                        Feedback
+                    </button>
+                </nav>
             </div>
-        </div>
+            <div className='icon-box'>
+                <Link
+                    href='https://github.com/ahmdbnrsl'
+                    target='_blank'
+                >
+                    <FaGithub className='icon hover:text-slate-200' />
+                </Link>
+                <Link
+                    href='https://www.linkedin.com/in/ahmad-beny-15391b289'
+                    target='_blank'
+                >
+                    <FaLinkedin className='icon hover:text-blue-500' />
+                </Link>
+                <Link
+                    href='https://instagram.com/ahmd.bn.tsx'
+                    target='_blank'
+                >
+                    <FaInstagram className='icon hover:text-fuchsia-500' />
+                </Link>
+                <Link
+                    href='https://twitter.com/LiviaOdrig88804'
+                    target='_blank'
+                >
+                    <FaXTwitter className='icon hover:text-slate-200' />
+                </Link>
+                <Link
+                    href='https://tiktok.com/@rust.ly'
+                    target='_blank'
+                >
+                    <FaTiktok className='icon hover:text-slate-200' />
+                </Link>
+            </div>
+        </header>
     );
-}
+};

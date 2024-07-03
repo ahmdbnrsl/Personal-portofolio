@@ -1,0 +1,26 @@
+[
+    {
+        "title": "STMIK Komputama Majenang",
+        "level": "College of Computer Science and Management",
+        "year": "2024 — 2028",
+        "desc": "STMIK Komputama Majenang is a College of Informatics and Computer Management located in Majenang, Central Java, Indonesia. The institution offers study programs in information technology and computer science, focusing on the development of both practical and theoretical skills in these fields.",
+        "location_link": "/",
+        "location_name": "Cimanggu District, Cilacap Regency, Central Java",
+        "tags": [
+            "Informatics Engineering",
+            "Computer",
+            "Developer",
+            "Web App Developer",
+            "Mobile App Developer"
+        ]
+    },
+    {
+        "title": "SMK Darul Ulum",
+        "level": "Vacational High School",
+        "year": "2020 — 2023",
+        "desc": "SMK Darul Ulum Sidareja is a vocational high school located in Sidareja, Cilacap, Central Java. The school offers various vocational programs, including Pharmacy and Sharia Banking.",
+        "location_link": "/",
+        "location_name": "Sidareja District, Cilacap Regency, Central Java",
+        "tags": ["Pharmacy", "Health"]
+    }
+]

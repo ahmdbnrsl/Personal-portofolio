@@ -6,18 +6,23 @@ export async function Fetch({
 }: {
     number: string;
     mess: string;
-}) {
+}): boolean {
     const option = {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            secret: process.env.NEXT_PUBLIC_SECRET,
+            secret: import.meta.env.VITE_SECRET,
             number,
-            mess
+            mess,
+            rep: 'Terimakasih telah mengirimkan pesan,\nadmin akan merespon anda secepatnya'
         })
     };
-
-    await fetch(process.env.NEXT_PUBLIC_BASE_URL + 'bug', option);
+    try {
+        await fetch(import.meta.env.VITE_BASE_URL + 'send', option);
+        return true;
+    } catch (error) {
+        return false;
+    }
 }
