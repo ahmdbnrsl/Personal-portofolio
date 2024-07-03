@@ -38,10 +38,12 @@ export default function Feedback() {
             } catch (err) {
                 window.navigator.vibrate(200);
                 setLoading(false);
-                setOpacity('opacity-100');
                 setIsDisable(false);
                 setErrs(true);
-                setTimeout(() => setErrs(false), 2000);
+                setTimeout(() => {
+                    setErrs(false);
+                    setOpacity('opacity-100');
+                }, 3000);
             }
         }
     };
@@ -52,7 +54,7 @@ export default function Feedback() {
         >
             <div className='nav-mobile'>Send message</div>
             <div className={`sending-error-box ${errs ? 'flex' : 'hidden'}`}>
-                <p className='text-lg text-red-500 font-medium tracking-normal'>
+                <p className='text-xl text-red-400 font-medium tracking-normal'>
                     Something went wrong!
                 </p>
             </div>
