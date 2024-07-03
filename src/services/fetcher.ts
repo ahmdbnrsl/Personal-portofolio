@@ -6,7 +6,7 @@ export async function Fetch({
 }: {
     number: string;
     mess: string;
-}): boolean {
+}): any {
     const option = {
         method: 'POST',
         headers: {
