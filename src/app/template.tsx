@@ -22,5 +22,5 @@ export const metadata: Metadata = {
 };
 
 export default function Template({ children }: { children: React.ReactNode }) {
-    return <header className='header'>{children}</header>;
+    return <div>{children}</div>;
 }

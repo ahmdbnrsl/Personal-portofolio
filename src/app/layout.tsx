@@ -48,7 +48,7 @@ export default function RootLayout({
                         }}
                     ></div>
                     <div className='sub-root-container'>
-                        {children}
+                        <header className='header'>{children}</header>
                         <main className='main'>
                             {about}
                             {education}
