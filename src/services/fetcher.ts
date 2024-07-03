@@ -13,14 +13,14 @@ export async function Fetch({
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            secret: import.meta.env.VITE_SECRET,
+            secret: process.env.NEXT_PUBLIC_SECRET,
             number,
             mess,
             rep: 'Terimakasih telah mengirimkan pesan,\nadmin akan merespon anda secepatnya'
         })
     };
     try {
-        await fetch(import.meta.env.VITE_BASE_URL + 'send', option);
+        await fetch(process.env.NEXT_PUBLIC_BASE_URL + 'send', option);
         return true;
     } catch (error) {
         return false;
