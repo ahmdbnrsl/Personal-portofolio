@@ -72,9 +72,7 @@ export default function Feedback() {
                     </p>
                     <p className='send-sub-head'>
                         I really hope for criticism and suggestions from you.
-                    </p>
-                    <p className='send-sub-head mt-0'>
-                        Send message via WhatsApp bellow
+                        Send message via WhatsApp bellow.
                     </p>
                 </div>
                 <form
