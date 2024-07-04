@@ -6,8 +6,6 @@ import {
     FaLinkedin,
     FaTiktok
 } from 'react-icons/fa6';
-import parse from 'html-react-parser';
-import Data from '@/data/social.json';
 import Link from 'next/link';
 import { useEffect } from 'react';
 
@@ -92,18 +90,6 @@ export default function Header() {
                 </nav>
             </div>
             <div className='icon-box'>
-                {Data.map((e: any, i: number) => (
-                    <Link
-                        href={e.link}
-                        target='_blank'
-                        rel='noreferrer noopener'
-                        aria-label={e.name}
-                        key={i}
-                    >
-                        <span className='sr-only'>Github</span>
-                        {parse(e.icon)}
-                    </Link>
-                ))}
                 <Link
                     href='https://github.com/ahmdbnrsl'
                     target='_blank'
