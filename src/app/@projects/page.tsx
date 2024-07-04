@@ -31,7 +31,7 @@ export default function Projects() {
                                 </span>
                                 <MdArrowOutward className='transition-transform ml-0.5 lg:group-hover/box:bg-sky-600/[0.5] group-hover/box:-translate-y-1 group-hover/box:translate-x-1' />
                             </Link>
-                            <div className='content-desc select-none'>
+                            <div className='content-desc'>
                                 <p className='h-full'>{e.desc}</p>
                             </div>
                             <div className='tag-container'>
