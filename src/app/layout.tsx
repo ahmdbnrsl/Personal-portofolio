@@ -50,7 +50,7 @@ export default function RootLayout({
                     ></div>
                     <div className='sub-root-container'>
                         <header className='header'>{children}</header>
-                        <main className='main'>
+                        <main className='main select-none'>
                             {about}
                             {education}
                             {projects}
