@@ -1,14 +1,14 @@
 [
     {
         "name": "Personal Portofolio",
-        "desc": "This is my second portfolio, built using Next.js, Tailwind CSS and hosted on Vercel",
+        "desc": "This is my second portfolio, built with Next.js, Tailwind CSS and hosted on Vercel",
         "tags": ["Next.js", "Typescript", "React", "Tailwind"],
         "thumbnail": "/projects/01.jpg",
         "demo": "/"
     },
     {
         "name": "Online Qur'an",
-        "desc": "The Online Quran App based on website. Integrated with API from santrikoding. With this app you can read Quran from anywhere, and you can marked latest ayah which you readed. Not only that, this application is also equipped with an ayah and surah search which will speed you up in finding the verse you want to read.",
+        "desc": "The website Alquran Kareem allows users to read the Quran online. It provides options to navigate through different surahs (chapters) and ayahs (verses). The site has a clean and user-friendly interface, making it easy for users to access and read the Quranic text.",
         "tags": ["Vite", "Typescript", "React", "Tailwind", "Mongo DB"],
         "thumbnail": "/projects/02.png",
         "demo": "https://alquran-kareem.my.id/"
@@ -22,7 +22,7 @@
     },
     {
         "name": "Note App",
-        "desc": "Create some note and manage it using Note App.",
+        "desc": "Simple and minimalist note-taking application. It allows users to create, edit, and manage notes efficiently. The interface is clean and straightforward, focusing on providing a distraction-free writing environment.",
         "tags": ["Vite", "React", "Tailwind", "Mongo DB", "Bun", "Typescript"],
         "thumbnail": "/projects/04.png",
         "demo": "https://notesqu.vercel.app/"
