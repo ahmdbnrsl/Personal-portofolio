@@ -48,12 +48,6 @@ export default function RootLayout({
         <html lang='en'>
             <body className={inter.className}>
                 <Container>
-                    <div
-                        className='lg:absolute inset-0 z-[999] fixed pointer-events-none transition duration-300'
-                        style={{
-                            backgroundImage: `radial-gradient(600px circle at ${x}px ${y}px, rgba(20, 78, 216, 0.15), transparent 80%)`
-                        }}
-                    ></div>
                     <div className='sub-root-container'>
                         <header className='header'>{children}</header>
                         <main className='main'>

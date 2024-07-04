@@ -19,6 +19,12 @@ export default function Container({ children }: { children: React.ReactNode }) {
             onMouseOver={MouseOver}
             translate='no'
         >
+            <div
+                className='lg:absolute inset-0 z-[999] fixed pointer-events-none transition duration-300'
+                style={{
+                    backgroundImage: `radial-gradient(600px circle at ${x}px ${y}px, rgba(20, 78, 216, 0.15), transparent 80%)`
+                }}
+            ></div>
             {children}
         </div>
     );
