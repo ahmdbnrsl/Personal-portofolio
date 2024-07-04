@@ -40,6 +40,7 @@ export default function RootLayout({
                 <div
                     className='root-container'
                     onMouseOver={MouseOver}
+                    translate='no'
                 >
                     <div
                         className='lg:absolute inset-0 z-[999] fixed pointer-events-none transition duration-300'
