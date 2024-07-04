@@ -1,12 +1,33 @@
-'use client';
+import type { Metadata } from 'next';
 import { Inter_Tight } from 'next/font/google';
-import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import './globals.css';
+
+const Container = dynamic(() => import('./container.tsx'));
 
 const inter = Inter_Tight({
     subsets: ['latin'],
     weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
 });
+
+export const metadata: Metadata = {
+    metadataBase: new URL(
+        process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000'
+    ),
+    title: 'Ahmad Beni Rusli',
+    description: 'Personal portofolio build with Next.js',
+    authors: [
+        {
+            name: 'Ahmad Beni Rusli',
+            url: 'https://instagram.com/ahmd.bn.tsx'
+        }
+    ],
+
+    openGraph: {
+        title: 'Ahmad Beni Rusli',
+        description: 'Personal portofolio build with Next.js'
+    }
+};
 
 export default function RootLayout({
     children,
@@ -23,25 +44,10 @@ export default function RootLayout({
     feedback: React.ReactNode;
     footer: React.ReactNode;
 }>) {
-    const [x, setX] = useState<number>(0);
-    const [y, setY] = useState<number>(0);
-    const MouseOver = (e: any) => {
-        if (window.innerWidth >= 1280) {
-            setX(e.clientX);
-            setY(e.pageY);
-        } else {
-            setX(0);
-            setY(0);
-        }
-    };
     return (
         <html lang='en'>
             <body className={inter.className}>
-                <div
-                    className='root-container'
-                    onMouseOver={MouseOver}
-                    translate='no'
-                >
+                <Container>
                     <div
                         className='lg:absolute inset-0 z-[999] fixed pointer-events-none transition duration-300'
                         style={{
@@ -58,7 +64,7 @@ export default function RootLayout({
                             {footer}
                         </main>
                     </div>
-                </div>
+                </Container>
             </body>
         </html>
     );
