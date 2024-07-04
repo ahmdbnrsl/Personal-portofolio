@@ -3,7 +3,7 @@ import { Inter_Tight } from 'next/font/google';
 import dynamic from 'next/dynamic';
 import './globals.css';
 
-const Container = dynamic(() => import('./container.tsx'));
+const Container = dynamic(() => import('./container'));
 
 const inter = Inter_Tight({
     subsets: ['latin'],
