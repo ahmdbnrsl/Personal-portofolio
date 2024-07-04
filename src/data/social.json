@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Github",
+        "link": "https://github.com/ahmdbnrsl",
+        "icon": "<FaGithub className='icon hover:text-slate-200' />"
+    },
+    {
+        "name": "Linkedin",
+        "link": "https://www.linkedin.com/in/ahmad-beny-15391b289",
+        "icon": "<FaLinkedin className='icon hover:text-slate-200' />"
+    },
+    {
+        "name": "Instagram",
+        "link": "https://instagram.com/ahmd.bn.tsx",
+        "icon": "<FaInstagram className='icon hover:text-slate-200' />"
+    },
+    {
+        "name": "Twitter",
+        "link": "https://twitter.com/LiviaOdrig88804",
+        "icon": "<FaXTwitter className='icon hover:text-slate-200' />"
+    },
+    {
+        "name": "Tiktok",
+        "link": "https://tiktok.com/@rust.ly",
+        "icon": "<FaTiktok className='icon hover:text-slate-200' />"
+    }
+]

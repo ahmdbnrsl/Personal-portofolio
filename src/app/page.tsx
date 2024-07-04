@@ -6,6 +6,8 @@ import {
     FaLinkedin,
     FaTiktok
 } from 'react-icons/fa6';
+import parse from 'html-react-parser';
+import Data from '@/data/social.json';
 import Link from 'next/link';
 import { useEffect } from 'react';
 
@@ -90,34 +92,61 @@ export default function Header() {
                 </nav>
             </div>
             <div className='icon-box'>
+                {Data.map((e: any, i: number) => (
+                    <Link
+                        href={e.link}
+                        target='_blank'
+                        rel='noreferrer noopener'
+                        aria-label={e.name}
+                        key={i}
+                    >
+                        <span className='sr-only'>Github</span>
+                        {parse(e.icon)}
+                    </Link>
+                ))}
                 <Link
                     href='https://github.com/ahmdbnrsl'
                     target='_blank'
+                    rel='noreferrer noopener'
+                    aria-label='Github'
                 >
+                    <span className='sr-only'>Github</span>
                     <FaGithub className='icon hover:text-slate-200' />
                 </Link>
                 <Link
                     href='https://www.linkedin.com/in/ahmad-beny-15391b289'
                     target='_blank'
+                    rel='noreferrer noopener'
+                    aria-label='Linkedin'
                 >
+                    <span className='sr-only'>Linkedin</span>
                     <FaLinkedin className='icon hover:text-blue-500' />
                 </Link>
                 <Link
                     href='https://instagram.com/ahmd.bn.tsx'
                     target='_blank'
+                    rel='noreferrer noopener'
+                    aria-label='Instagram'
                 >
+                    <span className='sr-only'>Instagram</span>
                     <FaInstagram className='icon hover:text-fuchsia-500' />
                 </Link>
                 <Link
                     href='https://twitter.com/LiviaOdrig88804'
                     target='_blank'
+                    rel='noreferrer noopener'
+                    aria-label='Twitter'
                 >
+                    <span className='sr-only'>Twitter</span>
                     <FaXTwitter className='icon hover:text-slate-200' />
                 </Link>
                 <Link
                     href='https://tiktok.com/@rust.ly'
                     target='_blank'
+                    rel='noreferrer noopener'
+                    aria-label='Tiktok'
                 >
+                    <span className='sr-only'>Tiktok</span>
                     <FaTiktok className='icon hover:text-slate-200' />
                 </Link>
             </div>
