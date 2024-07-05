@@ -113,10 +113,10 @@
         @apply hover:text-sky-400 cursor-pointer content-title inline-flex focus-visible:text-sky-400 transition-all motion-reduce:transition-none;
     }
     .project-box-img {
-        @apply mt-4 sm:mt-0 sm:order-1 sm:col-span-2;
+        @apply relative h-fit mt-4 sm:mt-0 sm:order-1 sm:col-span-2 border border-slate-800 rounded overflow-hidden;
     }
     .project-img {
-        @apply w-full max-w-[15rem] h-auto rounded border border-slate-800;
+        @apply w-full max-w-[15rem] h-auto;
     }
     .project-more {
         @apply mt-16 lg:px-8 tracking-tight text-lg text-slate-200 font-medium flex-row justify-start;

@@ -46,6 +46,7 @@ export default function Projects() {
                             </div>
                         </div>
                         <div className='project-box-img'>
+                            <div className='inset-0 absolute -translate-y-10 group-hover/box:translate-y-0 bg-slate-400/[0.25] backdrop-blur transition-all'></div>
                             <Image
                                 src={e.thumbnail}
                                 className='project-img group-hover/box:border-slate-600'
