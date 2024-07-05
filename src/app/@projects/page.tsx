@@ -46,15 +46,17 @@ export default function Projects() {
                             </div>
                         </div>
                         <div className='project-box-img'>
-                            <div className='inset-0 absolute -translate-y-10 group-hover/box:translate-y-0 bg-slate-400/[0.25] backdrop-blur transition-all'></div>
-                            <Image
-                                src={e.thumbnail}
-                                className='project-img group-hover/box:border-slate-600'
-                                alt={e.name}
-                                width={320}
-                                height={180}
-                                loading='lazy'
-                            />
+                            <div className='relative h-fit border border-slate-800 rounded overflow-hidden group-hover/box:border-slate-600 w-full max-w-[15rem]'>
+                                <div className='inset-0 absolute -translate-y-full group-hover/box:translate-y-0 bg-slate-300/[0.25] backdrop-blur transition-all'></div>
+                                <Image
+                                    src={e.thumbnail}
+                                    className='project-img'
+                                    alt={e.name}
+                                    width={320}
+                                    height={180}
+                                    loading='lazy'
+                                />
+                            </div>
                         </div>
                     </div>
                 ))}
