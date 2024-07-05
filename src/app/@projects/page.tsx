@@ -47,7 +47,17 @@ export default function Projects() {
                         </div>
                         <div className='project-box-img'>
                             <div className='relative h-fit border border-slate-800 rounded overflow-hidden group-hover/box:border-slate-600 w-full max-w-[15rem]'>
-                                <div className='inset-0 absolute -translate-y-full group-hover/box:translate-y-0 bg-slate-300/[0.25] backdrop-blur transition-all'></div>
+                                <div className='inset-0 absolute -translate-y-full group-hover/box:translate-y-0 bg-slate-600/[0.45] backdrop-blur transition-all flex justify-center items-center'>
+                                    <Link
+                                        className='text-slate-200 text-xl'
+                                        href='https://github.com/ahmdbnrsl'
+                                        target='_blank'
+                                        rel='noreferrer noopener'
+                                        aria-label='Github'
+                                    >
+                                        <FaGithub />
+                                    </Link>
+                                </div>
                                 <Image
                                     src={e.thumbnail}
                                     className='project-img'
