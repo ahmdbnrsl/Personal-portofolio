@@ -55,7 +55,7 @@ export default function Feedback() {
             <div className='nav-mobile'>Send message</div>
             <div className={`sending-error-box ${errs ? 'flex' : 'hidden'}`}>
                 <p className='text-xl text-red-400 font-medium tracking-normal'>
-                    Something went wrong!
+                    ERR: Enter a Valid WhatsApp number!
                 </p>
             </div>
             <div
