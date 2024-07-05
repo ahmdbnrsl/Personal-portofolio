@@ -115,6 +115,12 @@
     .project-box-img {
         @apply mt-4 sm:mt-0 sm:order-1 sm:col-span-2;
     }
+    .sub-project-box-img {
+        @apply relative h-fit border border-slate-800 rounded overflow-hidden w-full max-w-[15rem];
+    }
+    .project-box-repo {
+        @apply inset-0 absolute -translate-y-full bg-slate-800/[0.45] backdrop-blur transition-all flex justify-center items-center;
+    }
     .project-img {
         @apply w-full max-w-[15rem] h-auto;
     }

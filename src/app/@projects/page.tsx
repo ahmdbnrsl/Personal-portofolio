@@ -46,11 +46,11 @@ export default function Projects() {
                             </div>
                         </div>
                         <div className='project-box-img'>
-                            <div className='relative h-fit border border-slate-800 rounded overflow-hidden group-hover/box:border-slate-600 w-full max-w-[15rem]'>
-                                <div className='inset-0 absolute -translate-y-full group-hover/box:translate-y-0 bg-slate-800/[0.45] backdrop-blur transition-all flex justify-center items-center'>
+                            <div className='sub-project-box-img group-hover/box:border-slate-600'>
+                                <div className='project-box-repo group-hover/box:translate-y-0'>
                                     <Link
                                         className='cursor-pointer text-slate-200 text-4xl'
-                                        href='https://github.com/ahmdbnrsl'
+                                        href={e.repo}
                                         target='_blank'
                                         rel='noreferrer noopener'
                                         aria-label='Github'
