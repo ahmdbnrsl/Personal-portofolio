@@ -26,7 +26,8 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Ahmad Beni Rusli',
         description: 'Personal portofolio build with Next.js'
-    }
+    },
+    themeColor: '#0f172a'
 };
 
 export default function RootLayout({
