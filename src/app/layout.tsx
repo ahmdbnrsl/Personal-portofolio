@@ -47,6 +47,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
+            <head>
+                <meta
+                    name='theme-color'
+                    content='#0f172a'
+                />
+            </head>
             <body className={inter.className}>
                 <Container>
                     <div className='sub-root-container'>
