@@ -67,9 +67,9 @@ export default function Header() {
                         />
                     </audio>
                     <div className='relative h-4 w-4 flex justify-center items-center'>
-                        <span className='inline-flex absolute animate-ping bg-sky-400 opacity-75 rounded-full w-full h-full'></span>
-                        <span className='relative bg-sky-500 rounded-full p-1.5 inline-flex'>
-                            <FaPlay className='text-slate-200 text-lg' />
+                        <span className='inline-flex absolute animate-ping bg-sky-400 opacity-75 rounded-full w-full h-full p-0.5'></span>
+                        <span className='relative bg-sky-500 rounded-full p-0.5 inline-flex'>
+                            <FaPlay className='text-slate-200 text-base' />
                         </span>
                     </div>
                     <p className='sub-title'>Fullstack Web Developer</p>
