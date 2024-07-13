@@ -11,19 +11,23 @@ import { useEffect, useState } from 'react';
 
 export default function Header() {
     const [play, setPlay] = useState<boolean>(false);
-    let audio: HTMLMediaElement | null = document.getElementById(
-        'aud'
-    ) as HTMLMediaElement;
+
     useEffect(() => {
         if (audio.paused) {
             setPlay(false);
         }
     }, [play]);
     const HandlePlay = () => {
+        let audio: HTMLMediaElement | null = document.getElementById(
+            'aud'
+        ) as HTMLMediaElement;
         audio?.play();
         setPlay(true);
     };
     const HandlePause = () => {
+        let audio: HTMLMediaElement | null = document.getElementById(
+            'aud'
+        ) as HTMLMediaElement;
         audio?.pause();
         setPlay(false);
     };
