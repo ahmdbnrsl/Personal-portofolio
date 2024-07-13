@@ -8,9 +8,14 @@ import {
     FaPlay
 } from 'react-icons/fa6';
 import Link from 'next/link';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Header() {
+    const [play, setPlay] = useState<boolean>(false);
+    const HandlePlay = () => {
+        document.getElementById('aud')?.play();
+        setPlay(true);
+    };
     const HandleClick = (e: any) => {
         const element: any = document.getElementById(e.target.textContent);
         element.scrollIntoView({
@@ -66,11 +71,25 @@ export default function Header() {
                             type='audio/mp3'
                         />
                     </audio>
-                    <div className='relative h-4 w-4 flex justify-center items-center'>
-                        <span className='inline-flex absolute animate-ping bg-sky-400 opacity-75 rounded-full w-full h-full p-0.5'></span>
+                    <div
+                        className={`relative h-4 w-4 mr-1 justify-center items-center cursor-pointer ${
+                            play ? 'hidden' : 'flex'
+                        }`}
+                        onClick={HandlePlay}
+                    >
+                        <span className='inline-flex absolute animate-ping bg-sky-400 opacity-75 rounded-full w-full h-full p-1'></span>
                         <span className='relative bg-sky-500 rounded-full p-1 inline-flex'>
                             <FaPlay className='text-slate-900 text-xs' />
                         </span>
+                    </div>
+                    <div
+                        className={`relative h-4 w-5 justify-center items-center gap-0.5 ${
+                            play ? 'flex' : 'hidden'
+                        }`}
+                    >
+                        <span className='inline-flex bg-sky-500 h-full rounded-full w-0.5'></span>
+                        <span className='inline-flex bg-sky-500 h-full rounded-full w-0.5'></span>
+                        <span className='inline-flex bg-sky-500 h-full rounded-full w-0.5'></span>
                     </div>
                     <p className='sub-title'>Fullstack Web Developer</p>
                 </div>
