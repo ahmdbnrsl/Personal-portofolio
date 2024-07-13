@@ -58,8 +58,8 @@ export default function Header() {
                 <div className='flex justify-start gap-3'>
                     <audio
                         id='aud'
-                        loop='true'
-                        preload='true'
+                        loop={true}
+                        preload={true}
                     >
                         <source
                             src='/song/song.mp3'
