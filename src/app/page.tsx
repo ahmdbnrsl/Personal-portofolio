@@ -55,7 +55,7 @@ export default function Header() {
                 <h1 className='title cursor-pointer'>
                     <Link href='/'>Ahmad Beni Rusli</Link>
                 </h1>
-                <div className='flex justify-start gap-3'>
+                <div className='flex justify-start gap-3 items-center'>
                     <audio
                         id='aud'
                         loop={true}
@@ -66,10 +66,10 @@ export default function Header() {
                             type='audio/mp3'
                         />
                     </audio>
-                    <div className='relative h-4 w-4 text-xl'>
+                    <div className='relative h-4 w-4 flex justify-center items-center'>
                         <span className='inline-flex absolute animate-ping bg-sky-400 opacity-75 rounded-full w-full h-full'></span>
-                        <span className='relative bg-sky-500 rounded-full w-full h-full inline-flex'>
-                            <FaPlay className='text-slate-200' />
+                        <span className='relative bg-sky-500 rounded-full p-1.5 inline-flex'>
+                            <FaPlay className='text-slate-200 text-lg' />
                         </span>
                     </div>
                     <p className='sub-title'>Fullstack Web Developer</p>
