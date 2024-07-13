@@ -90,7 +90,7 @@ export default function Header() {
                         <span className='relative bg-sky-600 rounded-full m-1 inline-flex w-full h-full'></span>
                     </div>
                     <div
-                        className={`relative h-4 w-5 justify-center items-center gap-1 ${
+                        className={`relative h-4 w-5 justify-center items-center gap-1 cursor-pointer ${
                             play ? 'flex' : 'hidden'
                         }`}
                         onClick={HandlePause}
