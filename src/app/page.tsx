@@ -86,13 +86,13 @@ export default function Header() {
                         </span>
                     </div>
                     <div
-                        className={`relative h-4 w-5 justify-center items-center gap-0.5 ${
+                        className={`relative h-4 w-5 justify-center items-center gap-1 ${
                             play ? 'flex' : 'hidden'
                         }`}
                     >
-                        <span className='inline-flex bg-sky-500 h-full rounded-full w-0.5'></span>
-                        <span className='inline-flex bg-sky-500 h-full rounded-full w-0.5'></span>
-                        <span className='inline-flex bg-sky-500 h-full rounded-full w-0.5'></span>
+                        <span className='inline-flex bg-sky-500 h-full rounded-full w-0.5 animate-aud'></span>
+                        <span className='inline-flex bg-sky-500 h-full rounded-full w-0.5 animate-aud2'></span>
+                        <span className='inline-flex bg-sky-500 h-full rounded-full w-0.5 animate-aud3'></span>
                     </div>
                     <p className='sub-title'>Fullstack Web Developer</p>
                 </div>
