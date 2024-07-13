@@ -13,6 +13,9 @@ export default function Header() {
     const [play, setPlay] = useState<boolean>(false);
 
     useEffect(() => {
+        let audio: HTMLMediaElement | null = document.getElementById(
+            'aud'
+        ) as HTMLMediaElement;
         if (audio.paused) {
             setPlay(false);
         }
