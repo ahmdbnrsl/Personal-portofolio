@@ -11,15 +11,6 @@ import { useEffect, useState } from 'react';
 
 export default function Header() {
     const [play, setPlay] = useState<boolean>(false);
-
-    useEffect(() => {
-        let audio: HTMLMediaElement | null = document.getElementById(
-            'aud'
-        ) as HTMLMediaElement;
-        if (audio.paused) {
-            setPlay(false);
-        }
-    }, [play]);
     const HandlePlay = () => {
         let audio: HTMLMediaElement | null = document.getElementById(
             'aud'
@@ -96,7 +87,7 @@ export default function Header() {
                         onClick={HandlePlay}
                     >
                         <span className='inline-flex absolute animate-ping bg-sky-400 opacity-75 rounded-full w-full h-full p-1'></span>
-                        <span className='relative bg-sky-500 rounded-full p-1 inline-flex w-full h-full'></span>
+                        <span className='relative bg-sky-600 rounded-full m-1 inline-flex w-full h-full'></span>
                     </div>
                     <div
                         className={`relative h-4 w-5 justify-center items-center gap-1 ${
