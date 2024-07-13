@@ -13,7 +13,10 @@ import { useEffect, useState } from 'react';
 export default function Header() {
     const [play, setPlay] = useState<boolean>(false);
     const HandlePlay = () => {
-        document.getElementById('aud')?.play();
+        let audio: HTMLMediaElement | null = document.getElementById(
+            'aud'
+        ) as HTMLMediaElement;
+        audio?.play();
         setPlay(true);
     };
     const HandleClick = (e: any) => {
