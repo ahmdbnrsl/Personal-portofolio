@@ -59,7 +59,7 @@ export default function Header() {
                     <audio
                         id='aud'
                         loop={true}
-                        preload={true}
+                        preload='true'
                     >
                         <source
                             src='/song/song.mp3'
