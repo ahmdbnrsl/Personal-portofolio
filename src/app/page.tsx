@@ -4,7 +4,8 @@ import {
     FaInstagram,
     FaXTwitter,
     FaLinkedin,
-    FaTiktok
+    FaTiktok,
+    FaPlay
 } from 'react-icons/fa6';
 import Link from 'next/link';
 import { useEffect } from 'react';
@@ -54,7 +55,25 @@ export default function Header() {
                 <h1 className='title cursor-pointer'>
                     <Link href='/'>Ahmad Beni Rusli</Link>
                 </h1>
-                <p className='sub-title'>Fullstack Web Developer</p>
+                <div className='flex justify-start gap-3'>
+                    <audio
+                        id='aud'
+                        loop='true'
+                        preload='true'
+                    >
+                        <source
+                            src='/song/song.mp3'
+                            type='audio/mp3'
+                        />
+                    </audio>
+                    <div className='relative h-4 w-4 text-xl'>
+                        <span className='inline-flex absolute animate-ping bg-sky-400 opacity-75 rounded-full w-full h-full'></span>
+                        <span className='relative bg-sky-500 rounded-full w-full h-full inline-flex'>
+                            <FaPlay className='text-slate-200' />
+                        </span>
+                    </div>
+                    <p className='sub-title'>Fullstack Web Developer</p>
+                </div>
                 <p className='quote'>
                     Professional code resolver, Creative, and Critical thinker
                 </p>
