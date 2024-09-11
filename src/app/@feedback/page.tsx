@@ -16,7 +16,7 @@ export default function Feedback() {
             e.target.phone.value.length > 15
         ) {
             e.target.phone.focus();
-        } else if (e.target.message.value.length < 10) {
+        } else if (e.target.message.value.length < 1) {
             e.target.message.focus();
         } else {
             setLoading(true);
@@ -83,7 +83,7 @@ export default function Feedback() {
                     <div className='send-input-group'>
                         <input
                             className='send-input'
-                            placeholder='Enter your valid WhatsApp number'
+                            placeholder='Enter your valid WhatsApp number (9-15 char)'
                             type='number'
                             name='phone'
                         />

@@ -15,11 +15,23 @@ export async function Fetch({
         body: JSON.stringify({
             secret: process.env.NEXT_PUBLIC_SECRET,
             number,
-            mess,
-            rep: 'Terimakasih telah mengirimkan pesan,\nadmin akan merespon anda secepatnya'
+            mess: `*${mess}*\n\nThank you for sending Your message.`,
+            rep: '© 2024 | Ahmad Beni Rusli',
+            quoted: [number, mess],
+            buttons: JSON.stringify([
+                {
+                    name: 'cta_url',
+                    buttonParamsJson: JSON.stringify({
+                        display_text: 'Instagram',
+                        url: 'https://instagram.com/ahmdbnrsl',
+                        merchant_url: ''
+                    })
+                }
+            ])
         })
     };
-    return await fetch(process.env.NEXT_PUBLIC_BASE_URL + 'send', option).then(
-        (res: any): boolean => (res.status == 200 ? true : false)
-    );
+    return await fetch(
+        process.env.NEXT_PUBLIC_BASE_URL + 'custom',
+        option
+    ).then((res: any): boolean => (res.status == 200 ? true : false));
 }
