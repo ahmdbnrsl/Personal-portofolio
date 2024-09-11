@@ -17,7 +17,7 @@ export async function Fetch({
             number,
             mess: `*${mess}*\n\nThank you for sending Your message.`,
             rep: '© 2024 | Ahmad Beni Rusli',
-            quoted: [number, mess],
+            quoted: JSON.stringify([number, mess]),
             buttons: JSON.stringify([
                 {
                     name: 'cta_url',
