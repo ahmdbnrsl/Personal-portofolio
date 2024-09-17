@@ -1,5 +1,21 @@
 [
     {
+        "name": "Realtime Chat App",
+        "desc": "This is a real-time chat application built using Next.js 14, Socket.IO, and MongoDB. It features user authentication with OTP via WhatsApp, real-time messaging, online/offline status tracking, and a search functionality for messages.",
+        "tags": [
+            "Next.js",
+            "Typescript",
+            "React",
+            "Tailwind",
+            "Socket.io",
+            "Baileys",
+            "Mongo DB"
+        ],
+        "thumbnail": "/projects/05.jpg",
+        "demo": "https://vbchat.vercel.app/",
+        "repo": "https://github.com/ahmdbnrsl/chat-app"
+    },
+    {
         "name": "Personal Portofolio",
         "desc": "This is my second portfolio, built with Next.js, Tailwind CSS and hosted on Vercel",
         "tags": ["Next.js", "Typescript", "React", "Tailwind"],
