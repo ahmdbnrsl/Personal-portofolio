@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     ),
     title: 'Ahmad Beni Rusli',
     description: 'Personal portofolio build with Next.js',
+    keywords: "Ahmad Beni Rusli, ahmad beni rusli, Beni, Fullstack Web Developer, Portofolio",
     authors: [
         {
             name: 'Ahmad Beni Rusli',
