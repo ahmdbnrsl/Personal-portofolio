@@ -9,6 +9,22 @@ export default function Feedback() {
     const [opacity, setOpacity] = useState<string>('opacity-100');
     const [isDisable, setIsDisable] = useState<boolean>(false);
     const [errs, setErrs] = useState<boolean>(false);
+
+    const date = (isDate: string): string => {
+        const date: Date = new Date(Number(isDate));
+
+        return `${String(date.getDate()).padStart(2, '0')}/${String(
+            date.getMonth() + 1
+        ).padStart(2, '0')}/${date.getFullYear()}`;
+    };
+
+    const hour = (isDate: string): string => {
+        const date: Date = new Date(Number(isDate));
+        return `${String(date.getHours()).padStart(2, '0')}:${String(
+            date.getMinutes()
+        ).padStart(2, '0')}`;
+    };
+
     const HandleSubmit = async (e: any) => {
         e.preventDefault();
         if (
@@ -25,7 +41,8 @@ export default function Feedback() {
             try {
                 const fetching: boolean = await Fetch({
                     number: e.target.phone.value,
-                    mess: e.target.message.value
+                    mess: e.target.message.value,
+                    timestamp: `${date(Date.now())} ${hour(Date.now())}`
                 });
                 if (fetching) {
                     setLoading(false);

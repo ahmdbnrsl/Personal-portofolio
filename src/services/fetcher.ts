@@ -2,10 +2,12 @@
 
 export async function Fetch({
     number,
-    mess
+    mess,
+    timestamp
 }: {
     number: string;
     mess: string;
+    timestamp: string;
 }): Promise<boolean> {
     const option = {
         method: 'POST',
@@ -15,7 +17,7 @@ export async function Fetch({
         body: JSON.stringify({
             secret: process.env.NEXT_PUBLIC_SECRET,
             number,
-            text: `Hallo 👋,\nTerimakasih telah mengirimkan pesan.\n\n Pesan anda : ${mess}\n`,
+            text: `*Hallo 👋,*\nTerimakasih telah mengirimkan pesan.\n\n\n *Pesan Anda :* ${mess}\n\nDikirim pada : \`${timestamp}\`\nDikirim melalui nomor : \`${number}\``,
             quoted: JSON.stringify([number, mess]),
             cards: JSON.stringify([
                 {
