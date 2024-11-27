@@ -17,7 +17,7 @@ export async function Fetch({
         body: JSON.stringify({
             secret: process.env.NEXT_PUBLIC_SECRET,
             number,
-            text: `*Hallo 👋,*\nTerimakasih telah mengirimkan pesan.\n\n *Pesan Anda :* ${mess}\n\n> ${timestamp}\n> ${number}\n`,
+            text: `*Hallo 👋,*\nTerimakasih telah mengirimkan pesan.\n\n *Pesan Anda :* \n\n"${mess}"\n\n> ${timestamp}\n> ${number}\n`,
             quoted: JSON.stringify([number, mess]),
             cards: JSON.stringify([
                 {
