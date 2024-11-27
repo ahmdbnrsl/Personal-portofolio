@@ -42,7 +42,9 @@ export default function Feedback() {
                 const fetching: boolean = await Fetch({
                     number: e.target.phone.value,
                     mess: e.target.message.value,
-                    timestamp: `${date(Date.now())} ${hour(Date.now())}`
+                    timestamp: `${date(Date.now().toString())} ${hour(
+                        Date.now().toString()
+                    )}`
                 });
                 if (fetching) {
                     setLoading(false);
