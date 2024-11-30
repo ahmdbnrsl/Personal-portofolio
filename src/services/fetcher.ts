@@ -21,7 +21,7 @@ export async function Fetch({
             quoted: JSON.stringify([number, mess]),
             cards: JSON.stringify([
                 {
-                    imgurl: 'https://i.postimg.cc/MHmzY2Cv/20241127-184633.jpg',
+                    imgurl: 'https://ahmdbnrsl.vercel.app/i.jpg',
                     text: '',
                     btn: [
                         {
