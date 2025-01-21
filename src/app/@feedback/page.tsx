@@ -103,7 +103,8 @@ export default function Feedback() {
                         <input
                             className='send-input'
                             placeholder='Enter your valid WhatsApp number (9-15 char)'
-                            type='number'
+                            type='text'
+                            inputMode='numeric'
                             name='phone'
                         />
                         <button
