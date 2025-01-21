@@ -1,6 +1,7 @@
 'use client';
 import { FaWhatsapp } from 'react-icons/fa6';
 import { CiPaperplane } from 'react-icons/ci';
+import { IoMdPaperPlane } from "react-icons/io";
 import { Fetch } from '@/services/fetcher';
 import { useState } from 'react';
 
@@ -113,7 +114,7 @@ export default function Feedback() {
                             disabled={isDisable}
                         >
                             {loading ? 'Sending...' : 'Submit'}{' '}
-                            <CiPaperplane
+                            <IoMdPaperPlane
                                 className={`ml-1 ${
                                     loading ? 'hidden' : 'inline-flex'
                                 }`}
