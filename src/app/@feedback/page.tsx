@@ -92,7 +92,7 @@ export default function Feedback() {
                         <FaWhatsapp className='mr-2' /> Send your feedback
                     </p>
                     <p className='send-sub-head'>
-                        I really hope for criticism and suggestions from you.
+                        I really hope for critics and suggestions from you.
                         Send message via WhatsApp bellow.
                     </p>
                 </div>
