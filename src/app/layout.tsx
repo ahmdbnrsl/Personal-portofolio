@@ -1,34 +1,58 @@
-import type { Metadata } from 'next';
-import { Inter_Tight } from 'next/font/google';
-import dynamic from 'next/dynamic';
-import './globals.css';
+import type { Metadata } from "next";
+import { Inter_Tight } from "next/font/google";
+import dynamic from "next/dynamic";
+import "./globals.css";
 
-const Container = dynamic(() => import('./container'));
+const Container = dynamic(() => import("./container"));
 
 const inter = Inter_Tight({
-    subsets: ['latin'],
-    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
+    subsets: ["latin"],
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]
 });
 
 export const metadata: Metadata = {
     metadataBase: new URL(
-        process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000'
+        process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000"
     ),
-    title: 'Ahmad Beni Rusli',
-    description: 'Personal portofolio build with Next.js',
-    keywords: "Ahmad Beni Rusli, ahmad beni rusli, Beni, Fullstack Web Developer, Portofolio",
+    title: "Ahmad Beni Rusli",
+    description: "Fullstack Web Developer | Machine Learning Engineer",
+    keywords:
+        "Ahmad Beni Rusli, ahmad beni rusli, Beni, Fullstack Web Developer, Portofolio, beni, bang ben, stmikkomputama, stmik, majenang, beni, ben, rusli, rusly, beny",
+
     authors: [
         {
-            name: 'Ahmad Beni Rusli',
-            url: 'https://instagram.com/ahmd.bn.tsx'
+            name: "Ahmad Beni Rusli",
+            url: "https://instagram.com/ahmd.bn.tsx"
         }
     ],
 
     openGraph: {
-        title: 'Ahmad Beni Rusli',
-        description: 'Personal portofolio build with Next.js'
+        title: "Ahmad Beni Rusli",
+        description: "Fullstack Web Developer | Machine Learning Engineer",
+        url: "https://ahmadbenirusli.com",
+        siteName: "Beni's Portofolio",
+        images: [
+            {
+                url: "https://raw.githubusercontent.com/ahmdbnrsl/photo/refs/heads/main/IMG-20250417-WA0074.jpg",
+                width: 3060,
+                height: 4080,
+                alt: "Ahmad Beni Rusli"
+            }
+        ],
+        type: "website",
+        locale: "id_ID"
     },
-    themeColor: '#0f172a'
+    twitter: {
+        card: "summary_large_image",
+        title: "Ahmad Beni Rusli",
+        description: "Fullstack Web Developer | Machine Learning Engineer",
+        images: [
+            "https://raw.githubusercontent.com/ahmdbnrsl/photo/refs/heads/main/IMG-20250417-WA0074.jpg"
+        ]
+    },
+    alternates: {
+        canonical: "https://ahmadbenirusli.com"
+    }
 };
 
 export default function RootLayout({
@@ -47,18 +71,15 @@ export default function RootLayout({
     footer: React.ReactNode;
 }>) {
     return (
-        <html lang='en'>
+        <html lang="en">
             <head>
-                <meta
-                    name='theme-color'
-                    content='#0f172a'
-                />
+                <meta name="theme-color" content="#0f172a" />
             </head>
             <body className={inter.className}>
                 <Container>
-                    <div className='sub-root-container'>
-                        <header className='header'>{children}</header>
-                        <main className='main'>
+                    <div className="sub-root-container">
+                        <header className="header">{children}</header>
+                        <main className="main">
                             {about}
                             {education}
                             {projects}
