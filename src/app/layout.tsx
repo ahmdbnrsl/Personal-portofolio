@@ -76,6 +76,12 @@ export default function RootLayout({
         <html lang="en">
             <head>
                 <meta name="theme-color" content="#0f172a" />
+                <link
+                    rel="icon"
+                    href="/favicon.ico"
+                    type="image/x-icon"
+                    sizes="16x16"
+                />
             </head>
             <body className={inter.className}>
                 <Container>
