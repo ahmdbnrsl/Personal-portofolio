@@ -11,9 +11,7 @@ const inter = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL(
-        process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000"
-    ),
+    metadataBase: new URL("https://portofolio.ab-rust.xyz"),
     title: "Ahmad Beni Rusli",
     description: "Fullstack Web Developer | Machine Learning Engineer",
     keywords:
@@ -22,14 +20,14 @@ export const metadata: Metadata = {
     authors: [
         {
             name: "Ahmad Beni Rusli",
-            url: "https://instagram.com/ahmd.bn.tsx"
+            url: "https://instagram.com/__rust.ly"
         }
     ],
 
     openGraph: {
         title: "Ahmad Beni Rusli",
         description: "Fullstack Web Developer | Machine Learning Engineer",
-        url: "https://ahmadbenirusli.com",
+        url: "https://portofolio.ab-rust.xyz",
         siteName: "Beni's Portofolio",
         images: [
             {
@@ -51,7 +49,11 @@ export const metadata: Metadata = {
         ]
     },
     alternates: {
-        canonical: "https://ahmadbenirusli.com"
+        canonical: "https://portofolio.ab-rust.xyz"
+    },
+    icons: {
+        icon: "/favicon.ico",
+        shortcut: "/favicon.ico"
     }
 };
 
