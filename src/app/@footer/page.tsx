@@ -7,7 +7,7 @@ export default function Footer() {
         >
             <div className='content-box'>
                 <div className=' tracking-wide text-sm sm:text-base lg:text-sm text-slate-500 w-fill max-w-[30ch] font-normal leading-normal'>
-                    build with Next.js styling with Tailwind css{' '}
+                    <span>build with Next.js styling with Tailwind css{' '}</span>{' '}
                     <span className='text-slate-400 font-medium'>© {new Date().getFullYear()}</span>{' '}
                     by{' '}
                     <span className='text-slate-400 font-medium'>
