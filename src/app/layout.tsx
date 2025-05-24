@@ -50,10 +50,6 @@ export const metadata: Metadata = {
     },
     alternates: {
         canonical: "https://portofolio.ab-rust.xyz"
-    },
-    icons: {
-        icon: "/favicon.ico",
-        shortcut: "/favicon.ico"
     }
 };
 
@@ -76,12 +72,7 @@ export default function RootLayout({
         <html lang="en">
             <head>
                 <meta name="theme-color" content="#0f172a" />
-                <link
-                    rel="icon"
-                    href="/favicon.ico"
-                    type="image/x-icon"
-                    sizes="16x16"
-                />
+                <link rel="icon" type="image/svg+xml" href="/favicon.png" />
             </head>
             <body className={inter.className}>
                 <Container>
